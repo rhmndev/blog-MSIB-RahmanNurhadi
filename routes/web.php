@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\PostQbuilderController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,6 @@ Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store
 Route::get('/posts/edit/{post}', [PostController::class, 'edit'])->name('posts.edit');
 Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 
-
+Route::resource('authors', AuthorController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('posts', PostController::class);

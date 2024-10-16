@@ -15,10 +15,16 @@ class Post extends Model
         'image', 
         'is_published', 
         'category_id',
+        'author_id',
     ];
 
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
     }
 }

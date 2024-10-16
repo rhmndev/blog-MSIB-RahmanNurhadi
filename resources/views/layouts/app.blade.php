@@ -27,6 +27,9 @@
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('authors.index') }}">Authors</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('categories.index') }}">Category</a>
                         </li>
                         <li class="nav-item">
